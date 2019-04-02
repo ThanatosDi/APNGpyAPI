@@ -2,7 +2,7 @@
 APNG web API
 
 # 方法
-* - [x] playnum
+* - [x] [playnum](#playnum)
 
 # 使用
 ## playnum 
