@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+# APNGpyAPI
+APNG web API
 
-You can use the [editor on GitHub](https://github.com/ThanatosDi/APNGpyAPI/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+# 方法
+* - [x] playnum
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+# 使用
+## playnum 
+* **POST**  
+  
+Key | Required | Description
+----|---- | ---
+image|necessary | 圖片二進位檔
+num|optional |  APNG播放次數，預設為 0 (loop)
+```python
+# POST to server
+import requests
+data = {
+    'image':open('example@2x.png', 'rb'),
+    'num':0
+}
+with requests.post('https://api.kawai.moe/apng/playnum',files=data) as resp:
+    print(resp.status_code)
+    print(resp.text)
+    
+# Response
+{"code": 200, "message": "success", "link": "https://api.kawai.moe/apng/i/kZyi48.png"}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ThanatosDi/APNGpyAPI/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+* **GET**  
+  
+Key | Required | Description
+----|---- | ---
+url|necessary | 圖片網址
+num|optional |  APNG播放次數，預設為 0 (loop)
+```python
+https://api.kawai.moe/apng/playnum?url=https://www.example.com/example.png&num=3
+# Response
+{"code": 200, "message": "success", "link": "https://api.kawai.moe/apng/i/kZyi48.png"}
+```
