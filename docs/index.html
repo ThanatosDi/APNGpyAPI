@@ -52,11 +52,27 @@
         <h3 id="post">POST</h3>
       </li>
     </ul>
-
-    <p>Key | Required | Description
-—-|—- | —
-image|necessary | 圖片二進位檔
-num|optional |  APNG播放次數，預設為 0 (loop)</p>
+	<table>
+		<thead>
+			<tr>
+				<th>Key</th>
+				<th>Required</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+	<tbody>
+		<tr>
+			<td>image</td>
+			<td>necessary</td>
+			<td>圖片二進位檔</td>
+		</tr>
+		<tr>
+			<td>num</td>
+			<td>optional</td>
+			<td>APNG播放次數，預設為 0 (loop)</td>
+		</tr>
+	</tbody>
+	</table>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># POST to server</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -76,10 +92,27 @@ num|optional |  APNG播放次數，預設為 0 (loop)</p>
       </li>
     </ul>
 
-    <p>Key | Required | Description
-—-|—- | —
-url|necessary | 圖片網址
-num|optional |  APNG播放次數，預設為 0 (loop)</p>
+    <table>
+	<thead>
+		<tr>
+			<th>Key</th>
+			<th>Required</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>url</td>
+			<td>necessary</td>
+			<td>圖片網址</td>
+		</tr>
+		<tr>
+			<td>num</td>
+			<td>optional</td>
+			<td>APNG播放次數，預設為 0 (loop)</td>
+		</tr>
+	</tbody>
+	</table>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">kawai</span><span class="o">.</span><span class="n">moe</span><span class="o">/</span><span class="n">apng</span><span class="o">/</span><span class="n">playnum</span><span class="err">?</span><span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">png</span><span class="o">&amp;</span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
 <span class="c"># Response</span>
 <span class="p">{</span><span class="s">"code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">"message"</span><span class="p">:</span> <span class="s">"success"</span><span class="p">,</span> <span class="s">"link"</span><span class="p">:</span> <span class="s">"https://api.kawai.moe/apng/i/kZyi48.png"</span><span class="p">}</span>
