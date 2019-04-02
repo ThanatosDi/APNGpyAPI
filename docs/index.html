@@ -34,7 +34,7 @@
       <h1 id="apngpyapi">APNGpyAPI</h1>
 <p>APNG web API</p>
 
-<h1 id="¤èªk">¤èªk</h1>
+<h1 id="æ–¹æ³•">æ–¹æ³•</h1>
 <ul>
   <li>
     <ul class="task-list">
@@ -43,7 +43,7 @@
   </li>
 </ul>
 
-<h1 id="¨Ï¥Î">¨Ï¥Î</h1>
+<h1 id="ä½¿ç”¨">ä½¿ç”¨</h1>
 <ul>
   <li>
     <h2 id="playnum">playnum</h2>
@@ -54,9 +54,9 @@
     </ul>
 
     <p>Key | Required | Description
-¡X-|¡X- | ¡X
-image|necessary | ¹Ï¤ù¤G¶i¦ìÀÉ
-num|optional |  APNG¼½©ñ¦¸¼Æ¡A¹w³]¬° 0 (loop)</p>
+â€”-|â€”- | â€”
+image|necessary | åœ–ç‰‡äºŒé€²ä½æª”
+num|optional |  APNGæ’­æ”¾æ¬¡æ•¸ï¼Œé è¨­ç‚º 0 (loop)</p>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># POST to server</span>
 <span class="kn">import</span> <span class="nn">requests</span>
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
@@ -77,9 +77,9 @@ num|optional |  APNG¼½©ñ¦¸¼Æ¡A¹w³]¬° 0 (loop)</p>
     </ul>
 
     <p>Key | Required | Description
-¡X-|¡X- | ¡X
-url|necessary | ¹Ï¤ùºô§}
-num|optional |  APNG¼½©ñ¦¸¼Æ¡A¹w³]¬° 0 (loop)</p>
+â€”-|â€”- | â€”
+url|necessary | åœ–ç‰‡ç¶²å€
+num|optional |  APNGæ’­æ”¾æ¬¡æ•¸ï¼Œé è¨­ç‚º 0 (loop)</p>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">kawai</span><span class="o">.</span><span class="n">moe</span><span class="o">/</span><span class="n">apng</span><span class="o">/</span><span class="n">playnum</span><span class="err">?</span><span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">png</span><span class="o">&amp;</span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
 <span class="c"># Response</span>
 <span class="p">{</span><span class="s">"code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">"message"</span><span class="p">:</span> <span class="s">"success"</span><span class="p">,</span> <span class="s">"link"</span><span class="p">:</span> <span class="s">"https://api.kawai.moe/apng/i/kZyi48.png"</span><span class="p">}</span>
