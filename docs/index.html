@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>APNGpyAPI</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="APNGpyAPI" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="https://thanatosdi.github.io/APNGpyAPI/" />
+<meta property="og:url" content="https://thanatosdi.github.io/APNGpyAPI/" />
+<meta property="og:site_name" content="APNGpyAPI" />
+<script type="application/ld+json">
+{"@type":"WebSite","url":"https://thanatosdi.github.io/APNGpyAPI/","name":"APNGpyAPI","headline":"APNGpyAPI","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="/APNGpyAPI/assets/css/style.css?v=8b846ee1e422361c8efc8a69d033dd7ec632b6a5">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">APNGpyAPI</h1>
+      <h2 class="project-tagline"></h2>
+      
+        <a href="https://github.com/ThanatosDi/APNGpyAPI" class="btn">View on GitHub</a>
+      
+      
+    </section>
+
+    <section class="main-content">
+      <h1 id="apngpyapi">APNGpyAPI</h1>
+<p>APNG web API</p>
+
+<h1 id="方法">方法</h1>
+<ul>
+  <li>
+    <ul class="task-list">
+      <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" /><a href="#playnum">playnum</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="使用">使用</h1>
+<ul>
+  <li>
+    <h2 id="playnum">playnum</h2>
+    <ul>
+      <li>
+        <h3 id="post">POST</h3>
+      </li>
+    </ul>
+
+    <p>Key | Required | Description
+—-|—- | —
+image|necessary | 圖片二進位檔
+num|optional |  APNG播放次數，預設為 0 (loop)</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># POST to server</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'image'</span><span class="p">:</span><span class="nb">open</span><span class="p">(</span><span class="s">'example@2x.png'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">),</span>
+    <span class="s">'num'</span><span class="p">:</span><span class="mi">0</span>
+<span class="p">}</span>
+<span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://api.kawai.moe/apng/playnum'</span><span class="p">,</span><span class="n">files</span><span class="o">=</span><span class="n">data</span><span class="p">)</span> <span class="k">as</span> <span class="n">resp</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+<span class="c"># Response</span>
+<span class="p">{</span><span class="s">"code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">"message"</span><span class="p">:</span> <span class="s">"success"</span><span class="p">,</span> <span class="s">"link"</span><span class="p">:</span> <span class="s">"https://api.kawai.moe/apng/i/kZyi48.png"</span><span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li>
+        <h3 id="get">GET</h3>
+      </li>
+    </ul>
+
+    <p>Key | Required | Description
+—-|—- | —
+url|necessary | 圖片網址
+num|optional |  APNG播放次數，預設為 0 (loop)</p>
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">api</span><span class="o">.</span><span class="n">kawai</span><span class="o">.</span><span class="n">moe</span><span class="o">/</span><span class="n">apng</span><span class="o">/</span><span class="n">playnum</span><span class="err">?</span><span class="n">url</span><span class="o">=</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">example</span><span class="o">.</span><span class="n">png</span><span class="o">&amp;</span><span class="n">num</span><span class="o">=</span><span class="mi">3</span>
+<span class="c"># Response</span>
+<span class="p">{</span><span class="s">"code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">"message"</span><span class="p">:</span> <span class="s">"success"</span><span class="p">,</span> <span class="s">"link"</span><span class="p">:</span> <span class="s">"https://api.kawai.moe/apng/i/kZyi48.png"</span><span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/ThanatosDi/APNGpyAPI">APNGpyAPI</a> is maintained by <a href="https://github.com/ThanatosDi">ThanatosDi</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </section>
+
+    
+  </body>
+</html>
