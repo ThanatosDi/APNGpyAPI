@@ -34,7 +34,7 @@ APNG web API
   url|necessary | 圖片網址
   num|optional |  APNG播放次數，預設為 0 (loop)
     
-  ```
+  ```python
   https://api.kawai.moe/apng/playnum?url=https://www.example.com/example.png&num=3
   # Response
   {"code": 200, "message": "success", "link": "https://api.kawai.moe/apng/i/kZyi48.png"}
