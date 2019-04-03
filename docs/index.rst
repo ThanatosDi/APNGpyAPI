@@ -6,13 +6,20 @@ APNG 圖片編輯 WEB API
 ===========
 - playnum_
 
+  - playnum.POST_
+  
+  - playnum.GET_
+
 使用
 ===========
 server : https://api.kawai.moe/apng/
 
 .. playnum:
+
 playnum
 ---------
+
+.. playnum.POST:
 
 * POST
 
@@ -38,6 +45,8 @@ playnum
 
       # Response
       {"code": 200, "message": "success", "link": "https://api.kawai.moe/apng/i/kZyi48.png"}
+
+.. playnum.GET:
 
 * GET
 
