@@ -13,7 +13,7 @@ APNG web API
   image|necessary | 圖片二進位檔
   num|optional |  APNG播放次數，預設為 0 (loop)
     
-  ```python
+  ```python  
   # POST to server
   import requests
   data = {
