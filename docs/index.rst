@@ -6,9 +6,9 @@ APNG 圖片編輯 WEB API
 ===========
 - playnum_
 
-  - playnum.POST_
+  - POST
   
-  - playnum.GET_
+  - GET
 
 使用
 ===========
