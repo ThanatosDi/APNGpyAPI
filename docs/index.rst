@@ -4,12 +4,13 @@ APNG 圖片編輯 WEB API
 
 方法
 ===========
-- `playnum <#playnum>`_
+- playnum_
 
 使用
 ===========
 server : https://api.kawai.moe/apng/
 
+.. playnum:
 playnum
 ---------
 
