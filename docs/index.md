@@ -12,6 +12,7 @@ APNG web API
   ----|---- | ---
   image|necessary | 圖片二進位檔
   num|optional |  APNG播放次數，預設為 0 (loop)
+    
   ```python
   # POST to server
   import requests
@@ -32,6 +33,7 @@ APNG web API
   ----|---- | ---
   url|necessary | 圖片網址
   num|optional |  APNG播放次數，預設為 0 (loop)
+    
   ```python
   https://api.kawai.moe/apng/playnum?url=https://www.example.com/example.png&num=3
   # Response
